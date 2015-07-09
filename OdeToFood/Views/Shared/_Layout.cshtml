@@ -5,7 +5,10 @@
         <title>@ViewBag.Title - My ASP.NET MVC Application</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/themes/base/css")
         @Styles.Render("~/Content/css")
+        @* .Render combines files together to optimize the browser. It combines different
+            file of the same type so the browser has to download fewer resources *@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
@@ -47,7 +50,8 @@
             @* @Html.Action("BestReview", "Reviews") *@
         </footer>
 
-        @Scripts.Render("~/bundles/jquery")
+        @* @Scripts.Render("~/bundles/jquery") *@
+        @Scripts.Render("~/bundles/otf")
         @RenderSection("scripts", required: false)
     </body>
 </html>
